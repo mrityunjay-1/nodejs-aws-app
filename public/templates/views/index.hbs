@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="css/for_homepage.css" rel="stylesheet" type="text/css" />
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Black+Ops+One&family=Langar&display=swap" rel="stylesheet">
+<style>
+    
+    .container-2{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%; height: 75vh;
+        z-index: 0;
+    }
+    
+    .main-front-div{
+        width: 99%;
+        height: 75vh;
+        background-color: red;
+        display: flex;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scroll-snap-stop: always;
+        scroll-behavior: smooth;
+        box-shadow: 2px 2px 5px grey;
+        border-radius: 5px;
+    }
+    
+    
+    .main-front-div::-webkit-scrollbar{
+        display: none;
+    }
+    
+    .main-front-div > div{
+        flex-shrink: 0;
+        width: 100%;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+        height: 100%;
+    }
+    
+    .splice > div:nth-child(1){
+        width: 60%; 
+    }
+    .splice > div:nth-child(2){
+        width: 40%; 
+    }
+  
+    
+    @media(max-width: 760px){
+        .navigation-bar-child-2-child-1{
+            display: none;
+        }
+        .navigation-bar-child-2-child-2{
+            display: grid;
+        }
+        .container-2{
+            /*border: 4px solid grey;*/
+            width: 100%;
+            height: 45vh;
+        }
+        .main-front-div{
+            height: 45vh;
+            width: 95%;
+        }
+        .splice{
+            flex-flow: column;
+        }
+        
+        .splice > div:nth-child(1){
+            width: 100%;
+            height: 60%;
+        }.splice > div:nth-child(2){
+            width: 100%;
+            height: 40%;
+        }
+        
+        .toggle-1{
+            position: absolute;
+            top: 0%;
+            bottom: 0;
+            left: 30%;
+            width: 70%;
+            display: block;
+            height: 100vh;
+            background-color: white;
+            box-shadow: 2px 2px 5px black;
+            
+        }
+        .navigation-bar-child-2-child-1 > div{
+            width: 100vw;
+            background-color: green;
+            height: 15vh;
+        }
+        .toggle-1  > div{
+            width: 100%;
+            background-color: red;
+        }
+    }
+</style>
+</head>
+<body>
+    <div>
+        <div class="container-1" >
+            <div class="navigation-bar">
+                <div class="navigation-bar-child-1"> <h2 style="padding-left: 3%; font-family: 'Aclonica', sans-serif;">Rashtriya Matadhikar Party </h2> </div>
+                <div class="navigation-bar-child-2">
+                    <div class="navigation-bar-child-2-child-1" id="toggleClass" > 
+                        <div> <button> Join RMAP </button> </div>
+                        <div> <button> Contact Us </button> </div>
+                        <div> <button> Donate Us </button> </div>
+                        <div>
+                            <div> Text </div>
+                            <div> <button onclick="document.body.style.fontSize = '40px'"> A+ </button> </div>
+                            <div> <button> A </button> </div>
+                            <div> <button> A- </button> </div>
+                        </div>
+                        <div> 
+                            <select>
+                                <option> Hindi </option>
+                            </select> 
+                        </div>
+                    </div>
+                    <div class="navigation-bar-child-2-child-2" onclick="function_hero()"><h1> &#9776;</h1></div>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+            let x = "j";
+            function function_hero(){
+                console.log(x);
+                if(x === "j"){
+                    document.querySelector("#toggleClass").classList.add("toggle-1");
+                    document.querySelector(".floating-div").style.zIndex = "2";
+                    document.querySelector(".floating-div").style.marginTop = "0";
+                    x = "m";
+                }
+                else{
+                    document.querySelector("#toggleClass").classList.remove("toggle-1");
+                    document.querySelector(".floating-div").style.zIndex = "12";
+                    document.querySelector(".floating-div").style.marginTop = "-5vh";
+                    x = "j";
+                }
+            }
+        </script>
+        
+        <!-- Floating DIV -->
+        
+        <div class="floating-div">
+            <div class="floating-div-child-1"> 
+                <div> <button style="border: none; background: none; color: white;" > <h4 style="text-shadow: 1px 1px 4px rgb(14, 2, 2);"> HELLO WORLD </h4> </button> </div>
+                <div> <button style="border: none; background: none; color: white;" > <h4 style="text-shadow: 1px 1px 2px black;"> HELLO WORLD </h4>  </button> </div>
+                <div> <button style="border: none; background: none; color: white;" > <h4 style="text-shadow: 1px 1px 2px black;"> HELLO WORLD </h4> </button> </div>
+                <div> <button style="border: none; background: none; color: white;" > <h4 style="text-shadow: 1px 1px 2px black;" > HELLO WORLD <i class="fa fa-caret-down"></i></h4> </button> </div>
+                <div> <button style="border: none; background: none; color: white;" > <h4 style="text-shadow: 1px 1px 2px black;"> HELLO WORLD <i class="fa fa-caret-down"></i> </h4> </button> </div>
+                <div> <button style="border: none; background: none; color: white;" > <h3 style="text-shadow: 1px 1px 2px black;"> <i class="fa fa-search"></i>  </h3> </button> </div>
+            </div>
+        </div>
+        
+        
+        <div class="container-2" >
+            <div class="main-front-div" scroll="no" style="overflow: hidden;">
+                <div class="splice" style="display: flex;">
+                    <div style="background-color: black;"> <img style="width: 100%; height: 100%" /> </div>
+                    <div style="background-color:grey;" > </div>
+                </div>
+                <div style="background-color: grey;"> 
+                    <img  style="width: 100%; height: 100%" />
+                </div>
+                <div style="background-color: green;"> 
+                    <img  style="width: 100%; height: 100%" />
+                </div>
+                <div style="background-color: yellow;"> 
+                    <img  style="width: 100%; height: 100%" />
+                </div>
+            </div>
+            <div onclick="prev()" style="cursor: pointer; position: absolute; left: 0.5%; top: 48%; width: 40px; height: 40px; border-radius: 30px; box-shadow: 2px 2px 5px grey; background-color: rgba(255, 255, 255, 0.7); display: grid; place-items: center;"> <h1> &lsaquo; </h1> </div>
+            <div onclick="next()" style="cursor: pointer; position: absolute; right: 0.5%; top: 48%; height: 40px; width: 40px; border-radius: 30px; box-shadow: 2px 2px 5px grey; background-color: rgba(255, 255, 255, 0.7); display: grid; place-items: center;"> <h1> &rsaquo; </h1> </div>
+            <div style="display: flex; justify-content: center; align-items: center; padding: 1.5% 3%;cursor: pointer; position: absolute; bottom: 5%; right: 5%; height: 20px; width: auto; background-color: rgb(0, 0, 0, 0.5);"> 
+                <button style="font-size: 20px;padding: 0% 5%; background: none; color: white;border: none; "> &bull; </button>
+                <button style="font-size: 20px;padding: 0% 5%; background: none; color: white;border: none; "> &bull; </button>
+                <button style="font-size: 20px;padding: 0% 5%; background: none; color: white;border: none; "> &bull; </button>
+                <button style="font-size: 20px;padding: 0% 5%; background: none; color: white;border: none; "> &bull; </button>
+                <button style="font-size: 20px;padding: 0% 5%; background: none; color: white;border: none; " onclick="stop()"> <i class="fa fa-pause"></i> </button>   
+            </div>
+        </div>
+        <br />
+        <h1 class="unknown"> Mrityunjay </h1>
+        <h1> Mrityunjay </h1>
+        <h1> Mrityunjay </h1>
+        <h1> Mrityunjay </h1>
+        <h1> Mrityunjay </h1>
+        <h1> Mrityunjay </h1>
+        <h1> Mrityunjay </h1>
+        <h1> Mrityunjay </h1>
+        <h1> Mrityunjay </h1>
+        <h1> Mrityunjay </h1>
+        <h1> Mrityunjay </h1>
+        <h1> Mrityunjay </h1>
+        <h1> Mrityunjay </h1>
+        <h1> Mrityunjay </h1>
+        <h1> Mrityunjay </h1>
+        <h1> Mrityunjay </h1>
+        <h1> Mrityunjay </h1>
+        <h1> Mrityunjay </h1>
+        <h1> Mrityunjay </h1>
+        <h1> Mrityunjay </h1>
+        <h1> Mrityunjay </h1>
+        <h1> Mrityunjay </h1>
+        <h1> Mrityunjay </h1>
+        <h1> Mrityunjay </h1>
+        <h1> Mrityunjay </h1>
+        <h1> Mrityunjay </h1>
+        <h1> Mrityunjay </h1>
+        <h1> Mrityunjay </h1>
+        <h1> Mrityunjay </h1>
+        <h1> Mrityunjay </h1>
+        
+        {{user}}
+    </div>
+    
+    
+    
+    
+    
+<script>
+    let counter = 0;
+    function next(){
+        console.log("You clicked next");
+        counter += 1;
+        let sw = document.querySelector(".splice").scrollWidth;
+        document.querySelector(".main-front-div").scrollLeft += sw;
+    }
+    function prev(){
+        counter -= 1;
+        let sw = document.querySelector(".splice").scrollWidth;
+        document.querySelector(".main-front-div").scrollLeft -= sw;
+    }
+    let i = "jeevan";
+    function stop(){
+        if(i == "jeevan"){
+            clearInterval(inter);
+            i = "mrityu";
+        }else{
+            setInterval(interval, 3000);
+        }
+    }
+    
+    let inter;
+    window.onload = () => {
+        inter = setInterval(interval, 3000);
+    }
+    
+    const interval = () => {
+        next();
+        if(counter == 4){
+            document.querySelector(".main-front-div").scrollLeft = 0;
+        }
+    }
+</script>
+</body>
+</html>
