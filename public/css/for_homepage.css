@@ -243,7 +243,7 @@ img{
     }
     .container-2-child-1{
         height: 45vh;
-        width: 95%;
+        width: 100%;
     }
     .container-2-child-1-child-1{
         flex-flow: column;
