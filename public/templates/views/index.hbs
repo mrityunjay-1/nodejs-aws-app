@@ -94,8 +94,7 @@
                 <button> &bull; </button>
                 <button> &bull; </button>
                 <button> &bull; </button>
-                <button> &bull; </button>
-                <button onclick="stop()"> <i class="fa fa-pause"></i> </button>   
+                <button> &bull; </button> 
             </div>
         </div><br />
         
@@ -111,8 +110,12 @@
 <script>
     let counter = 0;
     function next(){
-        console.log("You clicked next");
         counter += 1;
+        console.log(counter);
+        if(counter == 4){
+            document.querySelector(".container-2-child-1").scrollLeft = 0;
+            counter = 0;
+        }
         let sw = document.querySelector(".container-2-child-1-child-1").scrollWidth;
         document.querySelector(".container-2-child-1").scrollLeft += sw;
     }
@@ -121,7 +124,7 @@
         let sw = document.querySelector(".container-2-child-1-child-1").scrollWidth;
         document.querySelector(".container-2-child-1").scrollLeft -= sw;
     }
-    let i = "jeevan";
+    /*let i = "jeevan";
     function stop(){
         if(i == "jeevan"){
             clearInterval(inter);
@@ -129,7 +132,7 @@
         }else{
             setInterval(interval, 3000);
         }
-    }
+    }*/
     
     let inter;
     window.onload = () => {
@@ -138,9 +141,7 @@
     
     const interval = () => {
         next();
-        if(counter == 4){
-            document.querySelector(".container-2-child-1").scrollLeft = 0;
-        }
+        
     }
 </script>
 </body>

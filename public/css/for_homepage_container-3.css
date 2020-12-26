@@ -12,34 +12,38 @@
 }
 
 .press-release-div{
-    width: 65%;
+    width: 68%;
     height: 100%;
     /*background-color: magenta;*/
-    box-shadow: 0.1rem 0.1rem 0.6rem black;
-    padding: 3%;
+    border: 0.05rem solid grey;
+    background-color: rgb(236, 225, 225);
+    padding: 0% 3%;
+    padding-top: 3%;
 }
 .press-release-div > div:nth-child(2)::-webkit-scrollbar{
     display: none;
 }
 
 .member-join-div{
-    width: 32%;
+    width: 30%;
     height: 100%;
     /*background-color: cyan;*/
+    border: 0.05rem solid grey;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
+    background-color: rgb(236, 225, 225);
 }
 .member-join-div > div:nth-child(1){
     width: 100%;
     height: 20%;
-    box-shadow: 0.1rem 0.1rem 0.6rem grey;
+/*    box-shadow: 0.1rem 0.1rem 0.6rem grey;*/
     padding: 6% 7%;
 }
 .member-join-div > div:nth-child(2){
     width: 100%;
     height: 75%;
-    box-shadow: 0.1rem 0.1rem 0.6rem black;
+    /*box-shadow: 0.1rem 0.1rem 0.6rem black;*/
     padding: 8% 8%;
 }
 
