@@ -15,9 +15,8 @@
     width: 65%;
     height: 100%;
     /*background-color: magenta;*/
-    border-radius: 0.5rem;
     box-shadow: 0.1rem 0.1rem 0.6rem black;
-    padding: 1.5%;
+    padding: 3%;
 }
 .press-release-div > div:nth-child(2)::-webkit-scrollbar{
     display: none;
@@ -27,7 +26,6 @@
     width: 32%;
     height: 100%;
     /*background-color: cyan;*/
-    border-radius: 0.3rem;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
@@ -35,16 +33,14 @@
 .member-join-div > div:nth-child(1){
     width: 100%;
     height: 20%;
-    border-radius: 0.3rem;
     box-shadow: 0.1rem 0.1rem 0.6rem grey;
-    padding: 4% 3%;
+    padding: 6% 7%;
 }
 .member-join-div > div:nth-child(2){
     width: 100%;
     height: 75%;
-    border-radius: 0.3rem;
     box-shadow: 0.1rem 0.1rem 0.6rem black;
-    padding: 4% 3%;
+    padding: 8% 8%;
 }
 
 
@@ -52,12 +48,12 @@ form > div{
     padding: 1%;
 }
 label{
-    font-size: 1.6rem;
+    font-size: 1.5rem;
 }
 
 input{
     width: 100%;
-    padding: 1%;
+    padding: 1.5%;
 }
 
 input[type=submit]{
@@ -74,7 +70,8 @@ input[type=submit]{
     .press-release-div{
         margin: 1% 0%;
         width: 96%;
-        height: 40vh;
+        padding: 6%;
+        height: 50vh;
     }
     .member-join-div{
         margin: 1% 0%;
