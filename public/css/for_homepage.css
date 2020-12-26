@@ -205,16 +205,16 @@ img{
 
 @media(max-width: 760px){
     .navigation-bar-child-1{
-        width: 60%;
+        width: 75%;
     }
     .navigation-bar-child-2{
-        width: 40%;
+        width: 25%;
     }
     .navigation-bar-child-2-child-1{
         display: none;
     }
     .navigation-bar-child-2-child-2{
-        
+        width: 80%;
         display: grid;
     }
     .container-2{
