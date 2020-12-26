@@ -5,7 +5,7 @@ html{
 * {margin: 0; padding: 0; box-sizing: border-box; }
 
 body{
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'helvetica';
 }
 
 .container-1{
@@ -102,7 +102,7 @@ body{
     scrollbar-width: none;
     overflow-x: scroll;
     scrollbar-width: none;
-    box-shadow: 0.2rem 0.2rem 1.2rem black;
+    box-shadow: 0.1rem 0.1rem 0.6rem black;
     border-radius: 0.3rem;
     border-top: 0.3rem solid black;
     background-color: rgb(8, 206, 8);
@@ -110,7 +110,7 @@ body{
     justify-content: flex-start;
     align-items: center;
     width: 95%;
-    height: 8vh;
+    height: 6.5vh;
 }
 
 .floating-div-child-1 > div{
@@ -187,13 +187,13 @@ img{
 
 /********* corousal prev *****/
 .corousal-prev{
-    cursor: pointer; position: absolute; left: 0.5%; top: 48%; width: 40px; height: 40px; border-radius: 30px; box-shadow: 2px 2px 5px grey; background-color: rgba(255, 255, 255, 0.7); display: grid; place-items: center;
+    cursor: pointer; position: absolute; left: 0.5%; top: 48%; width: 4rem; height: 4rem; border-radius: 3rem; box-shadow: 2px 2px 5px grey; background-color: rgba(255, 255, 255, 0.7); display: grid; place-items: center;
 }
 .corousal-next{
-    cursor: pointer; position: absolute; right: 0.5%; top: 48%; height: 40px; width: 40px; border-radius: 30px; box-shadow: 2px 2px 5px grey; background-color: rgba(255, 255, 255, 0.7); display: grid; place-items: center;
+    cursor: pointer; position: absolute; right: 0.5%; top: 48%; height: 4rem; width: 4rem; border-radius: 3rem; box-shadow: 2px 2px 5px grey; background-color: rgba(255, 255, 255, 0.7); display: grid; place-items: center;
 }
 .corousal-bullet-container{
-    display: flex; justify-content: center; align-items: center; padding: 1.5% 3%;cursor: pointer; position: absolute; bottom: 5%; right: 5%; height: 20px; width: auto; background-color: rgb(0, 0, 0, 0.5);
+    display: flex; justify-content: center; align-items: center; padding: 1.5% 3%;cursor: pointer; position: absolute; bottom: 5%; right: 5%; height: 2rem; width: auto; background-color: rgb(0, 0, 0, 0.5);
 }
 
 .corousal-bullet-container > button {font-size: 20px;padding: 0% 5%; background: none; color: white;border: none;}

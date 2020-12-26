@@ -8,14 +8,17 @@ const cookieParser = require('cookie-parser');
 const server = express();
 
 server.use(express.json());
+
+// this line is being used for looking the public directory where all the things (css, js, images) located
+// & - setup static directory to serve
+server.use(express.static(path.join(__dirname, "../public")));
+
 server.set("view engine", "hbs");
 server.set('views', path.join(__dirname, "../public/templates/views"));
 hbs.registerPartials(path.join(__dirname, "../public/templates/partials"));
 
 
-// this line is being used for looking the public directory where all the things (css, js, images) located
-// & - setup static directory to serve
-server.use(express.static(path.join(__dirname, "../public")));
+
 
 // using body-parser
 server.use(bodyParser.urlencoded({ extended: true }));
