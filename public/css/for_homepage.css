@@ -204,10 +204,17 @@ img{
 /*************       media Queries         ********************/
 
 @media(max-width: 760px){
+    .navigation-bar-child-1{
+        width: 60%;
+    }
+    .navigation-bar-child-2{
+        width: 40%;
+    }
     .navigation-bar-child-2-child-1{
         display: none;
     }
     .navigation-bar-child-2-child-2{
+        
         display: grid;
     }
     .container-2{
