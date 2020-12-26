@@ -1,124 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link href="css/for_homepage.css" rel="stylesheet" type="text/css" />
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Black+Ops+One&family=Langar&display=swap" rel="stylesheet">
-<style>
-    
-    .container-2{
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%; height: 75vh;
-        z-index: 0;
-    }
-    
-    .main-front-div{
-        width: 99%;
-        height: 75vh;
-        background-color: red;
-        display: flex;
-        overflow-x: scroll;
-        scroll-snap-type: x mandatory;
-        scroll-snap-stop: always;
-        scroll-behavior: smooth;
-        box-shadow: 2px 2px 5px grey;
-        border-radius: 5px;
-    }
-    
-    
-    .main-front-div::-webkit-scrollbar{
-        display: none;
-    }
-    
-    .main-front-div > div{
-        flex-shrink: 0;
-        width: 100%;
-        scroll-snap-align: start;
-        scroll-snap-stop: always;
-        height: 100%;
-    }
-    
-    .splice > div:nth-child(1){
-        width: 60%; 
-    }
-    .splice > div:nth-child(2){
-        width: 40%; 
-    }
-  
-    
-    @media(max-width: 760px){
-        .navigation-bar-child-2-child-1{
-            display: none;
-        }
-        .navigation-bar-child-2-child-2{
-            display: grid;
-        }
-        .container-2{
-            /*border: 4px solid grey;*/
-            width: 100%;
-            height: 45vh;
-        }
-        .main-front-div{
-            height: 45vh;
-            width: 95%;
-        }
-        .splice{
-            flex-flow: column;
-        }
-        
-        .splice > div:nth-child(1){
-            width: 100%;
-            height: 60%;
-        }.splice > div:nth-child(2){
-            width: 100%;
-            height: 40%;
-        }
-        
-        .toggle-1{
-            position: absolute;
-            top: 0%;
-            bottom: 0;
-            left: 30%;
-            width: 70%;
-            display: block;
-            height: 100vh;
-            background-color: white;
-            box-shadow: 2px 2px 5px black;
-            padding-top: 12vh;
-        }
-        .navigation-bar-child-2-child-1 > div{
-            display: grid;
-            align-items: center;
-            padding: 2%;
-        }
-        .navigation-bar-child-2-child-1 > div:nth-child(1){
-            width: 100%;
-        }
-        .navigation-bar-child-2-child-1 > div:nth-child(2){
-            width: 100%;
-        }
-        .navigation-bar-child-2-child-1 > div:nth-child(3){
-            width: 100%;
-        }
-        .navigation-bar-child-2-child-1 > div:nth-child(4){
-             width: 100%;
-             display: flex;
-             align-items: center;
-        }
-        .navigation-bar-child-2-child-1 > div:nth-child(4) > div{
-            margin: 0 0.3rem;
-        }
-        .navigation-bar-child-2-child-1 > div:nth-child(5){
-            width: 100%;
-        }
-    }
-</style>
+    <title> राष्ट्रिय मताधिकार पार्टी </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+	<link href="css/for_homepage.css" rel="stylesheet" type="text/css" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Black+Ops+One&family=Langar&display=swap" rel="stylesheet">
 </head>
 <body>
     <div>
@@ -180,63 +69,38 @@
         </div>
         
         
+        <!-- Container - 2 for Beautifull Corousal --> 
+        
         <div class="container-2" >
-            <div class="main-front-div" scroll="no" style="overflow: hidden;">
-                <div class="splice" style="display: flex;">
-                    <div style="background-color: black;"> <img style="width: 100%; height: 100%" /> </div>
+            <div class="container-2-child-1" scroll="no" style="overflow: hidden;">
+                <div class="container-2-child-1-child-1" >
+                    <div style="background-color: black;"> <img /> </div>
                     <div style="background-color:grey;" > </div>
                 </div>
                 <div style="background-color: grey;"> 
-                    <img  style="width: 100%; height: 100%" />
+                    <img />
                 </div>
                 <div style="background-color: green;"> 
-                    <img  style="width: 100%; height: 100%" />
+                    <img />
                 </div>
                 <div style="background-color: yellow;"> 
-                    <img  style="width: 100%; height: 100%" />
+                    <img />
                 </div>
             </div>
-            <div onclick="prev()" style="cursor: pointer; position: absolute; left: 0.5%; top: 48%; width: 40px; height: 40px; border-radius: 30px; box-shadow: 2px 2px 5px grey; background-color: rgba(255, 255, 255, 0.7); display: grid; place-items: center;"> <h1> &lsaquo; </h1> </div>
-            <div onclick="next()" style="cursor: pointer; position: absolute; right: 0.5%; top: 48%; height: 40px; width: 40px; border-radius: 30px; box-shadow: 2px 2px 5px grey; background-color: rgba(255, 255, 255, 0.7); display: grid; place-items: center;"> <h1> &rsaquo; </h1> </div>
-            <div style="display: flex; justify-content: center; align-items: center; padding: 1.5% 3%;cursor: pointer; position: absolute; bottom: 5%; right: 5%; height: 20px; width: auto; background-color: rgb(0, 0, 0, 0.5);"> 
-                <button style="font-size: 20px;padding: 0% 5%; background: none; color: white;border: none; "> &bull; </button>
-                <button style="font-size: 20px;padding: 0% 5%; background: none; color: white;border: none; "> &bull; </button>
-                <button style="font-size: 20px;padding: 0% 5%; background: none; color: white;border: none; "> &bull; </button>
-                <button style="font-size: 20px;padding: 0% 5%; background: none; color: white;border: none; "> &bull; </button>
-                <button style="font-size: 20px;padding: 0% 5%; background: none; color: white;border: none; " onclick="stop()"> <i class="fa fa-pause"></i> </button>   
+            <div class="corousal-prev" onclick="prev()"> <h2> &lsaquo; </h2> </div>
+            <div class="corousal-next" onclick="next()"> <h2> &rsaquo; </h2> </div>
+            <div class="corousal-bullet-container"> 
+                <button> &bull; </button>
+                <button> &bull; </button>
+                <button> &bull; </button>
+                <button> &bull; </button>
+                <button onclick="stop()"> <i class="fa fa-pause"></i> </button>   
             </div>
         </div>
         
+        
+        <!--******************      Container - 3  ******************* *-->
         <div>
-                    <h1> Mrityunjay </h1>
-        <h1> Mrityunjay </h1>
-        <h1> Mrityunjay </h1>
-        <h1> Mrityunjay </h1>
-        <h1> Mrityunjay </h1>
-        <h1> Mrityunjay </h1>
-        <h1> Mrityunjay </h1>
-        <h1> Mrityunjay </h1>
-        <h1> Mrityunjay </h1>
-        <h1> Mrityunjay </h1>
-        <h1> Mrityunjay </h1>
-        <h1> Mrityunjay </h1>
-        <h1> Mrityunjay </h1>
-        <h1> Mrityunjay </h1>
-        <h1> Mrityunjay </h1>
-        <h1> Mrityunjay </h1>
-        <h1> Mrityunjay </h1>
-        <h1> Mrityunjay </h1>
-        <h1> Mrityunjay </h1>
-        <h1> Mrityunjay </h1>
-        <h1> Mrityunjay </h1>
-        <h1> Mrityunjay </h1>
-        <h1> Mrityunjay </h1>
-        <h1> Mrityunjay </h1>
-        <h1> Mrityunjay </h1>
-        <h1> Mrityunjay </h1>
-        <h1> Mrityunjay </h1>
-        <h1> Mrityunjay </h1>
-        <h1> Mrityunjay </h1>
         
         </div>
     </div>
@@ -250,13 +114,13 @@
     function next(){
         console.log("You clicked next");
         counter += 1;
-        let sw = document.querySelector(".splice").scrollWidth;
-        document.querySelector(".main-front-div").scrollLeft += sw;
+        let sw = document.querySelector(".container-2-child-1-child-1").scrollWidth;
+        document.querySelector(".container-2-child-1").scrollLeft += sw;
     }
     function prev(){
         counter -= 1;
-        let sw = document.querySelector(".splice").scrollWidth;
-        document.querySelector(".main-front-div").scrollLeft -= sw;
+        let sw = document.querySelector(".container-2-child-1-child-1").scrollWidth;
+        document.querySelector(".container-2-child-1").scrollLeft -= sw;
     }
     let i = "jeevan";
     function stop(){
@@ -276,7 +140,7 @@
     const interval = () => {
         next();
         if(counter == 4){
-            document.querySelector(".main-front-div").scrollLeft = 0;
+            document.querySelector(".container-2-child-1").scrollLeft = 0;
         }
     }
 </script>
