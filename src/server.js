@@ -4,6 +4,7 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const expressSession = require('express-session');
 const cookieParser = require('cookie-parser');
+const HomepageRouter = require('./routers/HomepageRouter');
 
 const server = express();
 
@@ -41,12 +42,7 @@ server.use(cookieParser());
 
 
 // routers
-server.get('/', (req, res) => {
-    req.session.user = "Mrityunjay Kumar" + process.env.PORT;
-    res.render('index', {
-        user: req.session.user
-    });
-})
+server.use(HomepageRouter);
 
 server.listen(process.env.PORT, () => {
     console.log("server is up on port:" + process.env.PORT);

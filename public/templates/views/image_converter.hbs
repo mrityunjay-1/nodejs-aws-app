@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+<body>
+    <form id="form1" method="POST" enctype="multipart/form-data">
+        Upload File : <input type="file" name="file1" /> <span id="message" color="red">  </span>
+        <input type="number" name="width" />
+        <input type="number" name="height" />
+        <input type="submit" value="upload" name="submit" />
+    </form>
+    
+    <img id="mi" src="" style="width: 50%; "/>
+    
+<script>
+    document.getElementById("form1").addEventListener("submit" , (e) => {
+        e.preventDefault();
+        
+        //console.log(document.getElementById("form1"));
+        let formData = new FormData(document.getElementById("form1"));
+        //console.log(formData);
+        
+        fetch(`http://localhost:8080/sharp_image_converter`, {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("mi").src = `data:image/png;base64,${data.data}`
+        })
+        .catch(e => {
+            document.getElementById("message").innerHTML = "image upload failed file size exceeds";
+        });
+    })
+</script>
+</body>
+</html>
